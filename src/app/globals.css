@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #14212b;
+  --ink-soft: #2a3a47;
+  --mist: #e8eef0;
+  --paper: #f4f7f8;
+  --line: #c5d0d6;
+  --accent: #1a6b6b;
+  --accent-deep: #0f4a4a;
+  --highlight: #d4e8e4;
+  --code-bg: #1a2832;
+  --code-fg: #d7e2e8;
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-highlight: var(--highlight);
+  --color-code-bg: var(--code-bg);
+  --color-code-fg: var(--code-fg);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.atmosphere {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(26, 107, 107, 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(20, 33, 43, 0.08), transparent 50%),
+    linear-gradient(rgba(197, 208, 214, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(197, 208, 214, 0.35) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+  background-position: 0 0, 0 0, -1px -1px, -1px -1px;
+}
+
+.fade-up {
+  animation: fade-up 0.55s ease-out both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-nav {
+  animation: slide-nav 0.4s ease-out both;
+}
+
+@keyframes slide-nav {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
