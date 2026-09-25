@@ -1,4 +1,4 @@
-# PrepNotes
+# Interview Questions (PrepNotes)
 
 Interview prep notes organized into five readable sections:
 
@@ -12,22 +12,38 @@ Interview prep notes organized into five readable sections:
 
 Answers are concise and meant for quick revision — not a textbook.
 
-## Run locally
+## Requirements
+
+- Node.js 20+ (recommended)
+- npm
+
+## Running the app
 
 ```bash
+# install dependencies
 npm install
-npm run dev -- -p 43123
+
+# start the development server (port 43123)
+npm run dev
 ```
 
-Open [http://127.0.0.1:43123](http://127.0.0.1:43123).
+Then open **http://127.0.0.1:43123** in your browser.
 
-## Scripts
+### Other commands
 
-- `npm run dev` — development server
-- `npm run build` — production build
-- `npm start` — serve production build
-- `npm run lint` — ESLint
+```bash
+# production build
+npm run build
+
+# serve the production build (port 43123)
+npm start
+
+# lint
+npm run lint
+```
 
 ## Content
 
 Q&A lives in `src/content/` (`nodejs.ts`, `react.ts`, `css.ts`, `sql.ts`, `problems.ts`). Add or edit entries there; the UI picks them up automatically.
+
+Search supports live filtering and `?q=` in the URL (example: `/nodejs?q=JWT`).
