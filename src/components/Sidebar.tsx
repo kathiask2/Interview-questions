@@ -28,7 +28,7 @@ export function Sidebar() {
         </p>
       </Link>
 
-      <nav className="flex flex-row flex-wrap gap-2 md:flex-col md:gap-1">
+      <nav className="flex gap-1 overflow-x-auto pb-1 md:flex-col md:overflow-visible md:pb-0">
         {nav.map((item) => {
           const active =
             item.href === "/"
@@ -38,7 +38,7 @@ export function Sidebar() {
             <Link
               key={item.id}
               href={item.href}
-              className={`rounded-md px-3 py-2 text-sm transition-colors ${
+              className={`shrink-0 rounded-md px-3 py-2 text-sm whitespace-nowrap transition-colors ${
                 active
                   ? "bg-accent text-white"
                   : "text-ink-soft hover:bg-highlight hover:text-ink"
